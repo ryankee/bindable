@@ -14,14 +14,22 @@ You can attach bindings's methods to any object.
 
 ```javascript
 var boundObject = Bindable.Object.create({
-  first:"Jon",
-  last:"Doe"
+  firstName:"Jon",
+  lastName:"Doe",
+  fullName:function(){
+    return this.get('firstName') + ' ' + this.get('lastName');
+  }.property('firstName', 'lastName')
 });
 
-var output = "<p>Hello, " + boundObject.bind('first') + "</p>";
-document.body.innerHTML = output;
+var firstDOM = "<p>Hello, " + boundObject.bind('firstName') + "</p>";
+document.body.innerHTML = firstDOM;
 
-boundObject.set('first', 'Maxwell'); // DOM Updates
+boundObject.set('firstName', 'Maxwell'); // DOM Updates: "Hello, Maxwell Doe"
+
+var fullDOM = "<p>Hello, " + boundObject.bind('fullName') + "</p>";
+document.body.innerHTML = fullDOM;
+
+boundObject.set('firstName', 'David'); // DOM Updates: "Hello, David Doe"
 ```
 
 ## Contributing
