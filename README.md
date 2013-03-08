@@ -10,13 +10,7 @@ Download the [production version][min] or the [development version][max].
 [min]: https://raw.github.com/ryankee/bindings/master/dist/bindings.min.js
 [max]: https://raw.github.com/ryankee/bindings/master/dist/bindings.js
 
-In your web page:
-
-```html
-<script src="dist/bindable.min.js"></script>
-```
-
-In your code, you can attach bindings's methods to any object.
+You can attach bindings's methods to any object.
 
 ```javascript
 var boundObject = Bindable.Object.create({
