@@ -1,6 +1,7 @@
 # bindings
 
-Bind live objects to the DOM.
+Bind live objects to the DOM. The idea for this functionality is borrowed from
+[Ember](https://github.com/emberjs/ember.js).
 
 ## Getting Started
 
