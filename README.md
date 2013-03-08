@@ -7,8 +7,8 @@ Bind live objects to the DOM.
 ### In the browser
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/ryankee/bindings/master/dist/bindable.min.js
-[max]: https://raw.github.com/ryankee/bindings/master/dist/bindable.js
+[min]: https://raw.github.com/ryankee/bindable/master/dist/bindable.min.js
+[max]: https://raw.github.com/ryankee/bindable/master/dist/bindable.js
 
 You can attach bindings's methods to any object.
 
