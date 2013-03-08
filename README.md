@@ -25,7 +25,7 @@ var boundObject = Bindable.Object.create({
 var firstDOM = "<p>Hello, " + boundObject.bind('firstName') + "</p>";
 document.body.innerHTML = firstDOM;
 
-boundObject.set('firstName', 'Maxwell'); // DOM Updates: "Hello, Maxwell Doe"
+boundObject.set('firstName', 'Maxwell'); // DOM Updates: "Hello, Maxwell"
 
 var fullDOM = "<p>Hello, " + boundObject.bind('fullName') + "</p>";
 document.body.innerHTML = fullDOM;
