@@ -1,7 +1,8 @@
 # Bindable
 
 Bind live objects to the DOM. The idea for this functionality is borrowed from
-[Ember](https://github.com/emberjs/ember.js).
+[Ember](https://github.com/emberjs/ember.js). Take a look at this
+[jsfiddle](http://jsfiddle.net/ryankee/VwQgA/2/) to see it in action.
 
 ## Getting Started
 
