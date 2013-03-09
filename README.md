@@ -25,12 +25,12 @@ var boundObject = Bindable.Object.create({
 var firstDOM = "<p>Hello, " + boundObject.bind('firstName') + "</p>";
 document.body.innerHTML = firstDOM;
 
-boundObject.set('firstName', 'Maxwell'); // DOM Updates: "Hello, Maxwell"
+boundObject.set('firstName', 'Maxwell'); // DOM Updates: "<p>Hello, Maxwell</p>"
 
 var fullDOM = "<p>Hello, " + boundObject.bind('fullName') + "</p>";
 document.body.innerHTML = fullDOM;
 
-boundObject.set('firstName', 'David'); // DOM Updates: "Hello, David Doe"
+boundObject.set('firstName', 'David'); // DOM Updates: "<p>Hello, David Doe</p>" 
 ```
 
 Note: computed properties are cached after their first request and re-cached
