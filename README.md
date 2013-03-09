@@ -48,13 +48,21 @@ var boundObject = Bindable.Object.create({
 
 boundObject.get('time'); // "1362782277645 seconds"
 
-// note: time has passed but it's still the same
-boundObject.get('time'); // "1362782277645 seconds"
+setTimeout(function(){
+  // note: time has passed but it's still the same
+  boundObject.get('time'); // "1362782277645 seconds"
+}, 1000);
 
-boundObject.get('time', true); // "1362782412537 seconds"
+setTimeout(function(){
+  // bust the cache manually
+  boundObject.get('time', true); // "1362782412537 seconds"
+}, 1000);
 
-boundObject.set('descriptor', 'minutes');
-boundObject.get('time', true); // "1362782474713 seconds"
+setTimeout(function(){
+  // bust the cache by manipulating a relied upon property
+  boundObject.set('descriptor', 'minutes');
+  boundObject.get('time'); // "1362782474713 minutes"
+}, 1000);
 ```
 
 ## Contributing
